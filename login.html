@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Quản lý dự án</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <h2>Đăng nhập</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="text" id="email" placeholder="Địa chỉ email">
+                </div>
+                <div class="input-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="password" placeholder="Mật khẩu">
+                    <span class="error-msg" id="loginError"></span>
+                </div>
+                <button type="submit" class="btn-blue">Đăng nhập</button>
+                <p>Chưa có tài khoản? <a href="../pages/index.html">Đăng ký</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

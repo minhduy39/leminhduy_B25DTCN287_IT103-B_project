@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Quản lý dự án</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <h2>Đăng ký</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="fullname" placeholder="Họ và tên">
+                    <span class="error-text" id="nameError"></span>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="email" placeholder="Địa chỉ email">
+                    <span class="error-text" id="emailError"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Mật khẩu">
+                    <span class="error-text" id="passError"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Xác nhận mật khẩu">
+                    <span class="error-text" id="confirmError"></span>
+                </div>
+                <button type="submit" class="btn-blue">Đăng ký</button>
+                <p>Đã có tài khoản? <a href="../pages/login.html">Đăng nhập</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>
