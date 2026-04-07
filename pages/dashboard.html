@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Dự Án - Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Quản Lý Dự Án</div>
+        <div class="nav-links">
+            <span>Dự Án</span>
+            <span>Nhiệm Vụ của tôi</span>
+            <a href="../pages/login.html" id="logoutBtn">Đăng Xuất</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="card">
+            <h3>Quản Lý Dự Án Nhóm</h3>
+            <div class="toolbar">
+                <button class="btn-add" id="openAddModal">+ Thêm Dự Án</button>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm dự án">
+                </div>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">ID</th>
+                        <th>Tên Dự Án</th>
+                        <th style="width: 300px;">Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody id="projectList">
+                    </tbody>
+            </table>
+
+            <div class="pagination" id="pagination">
+                </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle">Thêm dự án</h3>
+                <span class="close-btn" onclick="closeProjectModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="projectForm">
+                    <div class="input-group">
+                        <label>Tên dự án</label>
+                        <input type="text" id="projectName" placeholder="Nhập tên dự án">
+                        <span class="error-text" id="nameError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Mô tả dự án</label>
+                        <textarea id="projectDesc" rows="4" placeholder="Nhập mô tả dự án"></textarea>
+                        <span class="error-text" id="descError"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeProjectModal()">Huỷ</button>
+                <button class="btn-save" id="saveProjectBtn">Lưu</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="deleteConfirmModal">
+        <div class="modal-box small-modal">
+            <div class="modal-header no-border">
+                <h3>Xác nhận xoá</h3>
+                <span class="close-btn" onclick="closeDeleteModal()">&times;</span>
+            </div>
+            <div class="modal-body text-center">
+                <p>Bạn chắc chắn muốn xoá dự án này?</p>
+            </div>
+            <div class="modal-footer no-border center-actions">
+                <button class="btn-cancel" onclick="closeDeleteModal()">Huỷ</button>
+                <button class="btn-delete-confirm" id="confirmDeleteBtn">Xoá</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        © 2025 Team management. All rights reserved.
+    </footer>
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>
